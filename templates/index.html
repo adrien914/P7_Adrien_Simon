@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="h-100" lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>GranPy Bot</title>
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+
+    {# TODO fix footer, fix button size #}
+    </head>
+    <body class="h-100">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <img class="m-auto top-image" alt="Papy" src="{{ url_for('static', filename='images/granpy.png')}}">
+                </div>
+                <div class="row">
+                    <h1 class="m-auto text-center top-text">Venez discuter avec GranPy Bot, le papy robot un peu sourd d'oreilles !</h1>
+                </div>
+            </div>
+        </header>
+        <div id="chat">
+            <bot-chat text="{{ welcome_sentence }}"></bot-chat>
+        </div>
+        <div class="col-12 text-center">
+            <input id="message-input" type="text" class="form-control col-3 d-inline">
+            <input id="message-button" type="button" value="Envoyer" onclick="send_message()" class="btn btn-primary col-1 d-inline">
+        </div>
+    </body>
+    <footer>
+        adrien simon
+        <a href="https://github.com/adrien914/P7_Adrien_Simon">
+            <img class="footer-img" alt="Lien github" src="{{ url_for('static', filename='images/github.png')}}">
+        </a>
+    </footer>
+    <script src="{{ url_for('static', filename='js/bot-chat.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/user-chat.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/chat.js')}}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ api_key }}&libraries=&v=weekly"></script>
+</html>
