@@ -50,7 +50,7 @@ function send_question(question) {
 async function question_answer(data) {
     chat = $('#chat')[0]
     // Réponse texte avec l'adresse
-    let element = `<bot-chat text="Cet endroit se trouve à: ${data.text}"></bot-chat>`
+    let element = `<bot-chat text="${data.text}"></bot-chat>`
     chat.innerHTML += element
     chat.scrollTop = chat.scrollHeight // Scroll to the bottom of the chat
     // Si les coordonnées ne sont pas vides

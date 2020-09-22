@@ -32,9 +32,8 @@ def send_question() -> Response:
     # Try to get the wikipedia summary
     wikipedia_summary = Wikipedia().get_request(parsed_question)
     try:
-        text = location[0]["formatted_address"]  # The full address
+        text = "Cet endroit se trouve à: " + location[0]["formatted_address"]  # The full address
         geometry_location = location[0]["geometry"]["location"]  # the gps coordinates
-
     except Exception:
         text = "Désolé, je n'ai pas compris la question"
         geometry_location = ""
