@@ -5,20 +5,22 @@ function send_message() {
     const input = document.getElementById('message-input')
     const input_button = document.getElementById('message-button')
     const text = input.value // Get the input's value
-    const element = `<user-chat text="${text}"></user-chat>` // create a new user chat with the value from the input
-    const chat = $('#chat')[0]
-    chat.innerHTML += element // Add the user-chat to the chat window
-    // Disable the two inputs until the request is done
-    input.setAttribute('disabled', "true")
-    input_button.setAttribute('disabled', "true")
-    chat.innerHTML += '<div class="loader"></div>'
-    chat.scrollTop = chat.scrollHeight // Scroll to the bottom of the chat
-    send_question(text).then(() => {
-        // Reenable the inputs
-        input.removeAttribute('disabled')
-        input_button.removeAttribute('disabled')
-        $('.loader').remove()
-    })
+    if(text) {
+        const element = `<user-chat text="${text}"></user-chat>` // create a new user chat with the value from the input
+        const chat = $('#chat')[0]
+        chat.innerHTML += element // Add the user-chat to the chat window
+        // Disable the two inputs until the request is done
+        input.setAttribute('disabled', "true")
+        input_button.setAttribute('disabled', "true")
+        chat.innerHTML += '<div class="loader"></div>'
+        chat.scrollTop = chat.scrollHeight // Scroll to the bottom of the chat
+        send_question(text).then(() => {
+            // Reenable the inputs
+            input.removeAttribute('disabled')
+            input_button.removeAttribute('disabled')
+            $('.loader').remove()
+        })
+    }
 }
 
 function send_question(question) {

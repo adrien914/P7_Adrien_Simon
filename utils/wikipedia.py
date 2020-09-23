@@ -32,5 +32,5 @@ class Wikipedia:
         try:
             summary = response["query"]["pages"][str(page_id)]["extract"]
             return summary
-        except:
+        except KeyError:
             return ""
