@@ -22,5 +22,4 @@ class GoogleMapsApi:
         if not result:
             params["address"] = sentence
             result = requests.get(url, params).json().get("results", None)
-        print(result)
         return result
