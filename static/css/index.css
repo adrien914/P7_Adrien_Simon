@@ -6,6 +6,8 @@
   font-size: 2vw !important;
 }
 
+
+
 footer {
   position: fixed;
   left: 0;
@@ -21,7 +23,7 @@ footer {
 #chat {
   margin: auto;
   height: 50vh;
-  width: 40%;
+  width: 60vw;
   background: white;
   border: solid 1px black;
   overflow: auto;
@@ -33,7 +35,7 @@ footer {
   padding-left: 5px;
   overflow-wrap: break-word;
   border-radius: 15px;
-
+  font-size: 15px;
 }
 
 .bot-chat-div {
@@ -93,3 +95,29 @@ footer {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+  .top-text {
+    font-size: 4vw !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .top-text {
+    font-size: 6vw !important;
+  }
+
+  #chat {
+    width: 90vw;
+  }
+
+  .bot-chat, .user-chat {
+    width: 50%;
+    margin: 1px 1px 1px 1px;
+    padding-left: 5px;
+    overflow-wrap: break-word;
+    border-radius: 15px;
+    font-size: 12px !important;
+  }
+}
+
