@@ -1,10 +1,17 @@
 import requests
 
 class Wikipedia:
-    """Class used for the media wiki API REST requests"""
+    """
+        Class used for the wiki API requests
+    """
 
     @staticmethod
-    def get_request(sentence: str) -> str:
+    def get_summary(sentence: str) -> str:
+        """
+        Get the summary of a wikipedia page
+        :param sentence:
+        :return:
+        """
         url = "https://fr.wikipedia.org/w/api.php"
         parameters = {
             "action": "query",

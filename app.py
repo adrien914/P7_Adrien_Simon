@@ -30,7 +30,7 @@ def send_question() -> Response:
     # Try to locate the place asked by the user using the parsed question
     location = google_maps_api.geolocate(parsed_question)
     # Try to get the wikipedia summary
-    wikipedia_summary = Wikipedia().get_request(parsed_question)
+    wikipedia_summary = Wikipedia().get_summary(parsed_question)
     try:
         text = "Cet endroit se trouve à: " + location[0]["formatted_address"]  # The full address
         geometry_location = location[0]["geometry"]["location"]  # the gps coordinates
