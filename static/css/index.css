@@ -41,7 +41,7 @@ footer {
 .bot-chat-div {
   width: 100%;
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
 }
 
 .user-chat-div {
