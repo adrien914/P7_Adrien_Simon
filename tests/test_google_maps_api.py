@@ -1,4 +1,3 @@
-import json
 from utils import google_maps_api
 import requests
 
