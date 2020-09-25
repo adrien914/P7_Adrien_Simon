@@ -20,7 +20,6 @@ def test_google_maps_api(monkeypatch):
           },
         }
 
-
     class MockResponse:
         def __init__(self, url, params):
             return
