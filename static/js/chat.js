@@ -1,7 +1,8 @@
-function send_message() {
+function send_message(e) {
     /*
     * This method gets the text that's in the input
     */
+    e.preventDefault()
     const input = document.getElementById('message-input')
     const input_button = document.getElementById('message-button')
     const text = input.value // Get the input's value
@@ -18,6 +19,7 @@ function send_message() {
             // Reenable the inputs
             input.removeAttribute('disabled')
             input_button.removeAttribute('disabled')
+            input.value = ""
             $('.loader').remove()
         })
     }
@@ -77,12 +79,18 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-$(document).ready(function () {
-    const input = document.getElementById('message-input')
-    input.addEventListener("keypress", function (event){
-        if (event.code === "Enter") {
-            send_message()
-        }
-    })
-})
+
+var form = document.getElementById("chat_form");
+
+// attach event listener
+form.addEventListener("submit", send_message, true);
+
+// $(document).ready(function () {
+//     const input = document.getElementById('message-input')
+//     input.addEventListener("keypress", function (event){
+//         if (event.code === "Enter") {
+//             send_message()
+//         }
+//     })
+// })
 

@@ -25,12 +25,14 @@
         <div id="chat">
             <bot-chat text="{{ welcome_sentence }}"></bot-chat>
         </div>
-        <div class="col-12 text-center">
-            <input id="message-input" type="text" class="form-control d-inline search-input">
-        </div>
-        <div class="col-12  text-center">
-            <input id="message-button" type="button" value="Envoyer" onclick="send_message()" class="btn btn-primary d-inline">
-        </div>
+        <form id="chat_form">
+            <div class="col-12 text-center">
+                <input id="message-input" type="text" class="form-control d-inline search-input">
+            </div>
+            <div class="col-12  text-center">
+                <input id="message-button" type="submit" value="Envoyer" class="btn btn-primary d-inline">
+            </div>
+        </form>
     </body>
     <footer>
         adrien simon
