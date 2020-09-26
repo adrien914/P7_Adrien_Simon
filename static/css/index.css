@@ -35,7 +35,7 @@ footer {
   padding-left: 5px;
   overflow-wrap: break-word;
   border-radius: 15px;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .bot-chat-div {
@@ -58,6 +58,14 @@ footer {
 }
 .user-chat {
   background-color: rgba(120, 120, 120, 0.25);
+}
+
+.search-input {
+  width: 60vw;
+}
+
+.wrapper {
+  display: block;
 }
 
 .animated-chat {
@@ -98,16 +106,16 @@ footer {
 
 @media screen and (min-width: 400px) and (max-width: 800px) {
   .top-text {
-    font-size: 7px !important;
+    font-size: 14px !important;
   }
 }
 
 @media screen and (max-width: 400px) {
   .top-text {
-    font-size: 7px !important;
+    font-size: 14px !important;
   }
 
-  #chat {
+  #chat, .search-input {
     width: 90vw;
   }
 
@@ -117,7 +125,7 @@ footer {
     padding-left: 5px;
     overflow-wrap: break-word;
     border-radius: 15px;
-    font-size: 12px !important;
+    font-size: 16px !important;
   }
 }
 
