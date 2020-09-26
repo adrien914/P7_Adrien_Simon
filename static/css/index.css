@@ -98,13 +98,13 @@ footer {
 
 @media screen and (min-width: 400px) and (max-width: 800px) {
   .top-text {
-    font-size: 7vw !important;
+    font-size: 7px !important;
   }
 }
 
 @media screen and (max-width: 400px) {
   .top-text {
-    font-size: 7vw !important;
+    font-size: 7px !important;
   }
 
   #chat {
